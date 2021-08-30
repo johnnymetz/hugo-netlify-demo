@@ -1,0 +1,81 @@
+baseURL: https://examplesite.com
+title: Example Site
+paginate: 5
+theme: PaperMod
+
+params:
+  # env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  DateFormat: 'January 2, 2006'
+  defaultTheme: auto
+
+  ###################
+  # Site-wide
+  ###################
+
+  label:
+    text: Example Site
+    # icon: /apple-touch-icon.png
+    # iconHeight: 35
+
+  assets:
+    disableHLJS: true # use Hugo's syntax highlighter "Chroma" instead of highlight.js
+    # disableFingerprinting: true
+    # favicon: '<link / abs url>'
+    # favicon16x16: '<link / abs url>'
+    # favicon32x32: '<link / abs url>'
+    # apple_touch_icon: '<link / abs url>'
+    # safari_pinned_tab: '<link / abs url>'
+
+  ###################
+  # Home
+  ###################
+
+  homeInfoParams:
+    Title: Welcome to my site
+
+  ###################
+  # SINGLE POST
+  ###################
+
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ['title', 'permalink', 'summary', 'content']
+
+# for search
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+menu:
+  main:
+    - name: Blog
+      url: blog/
+      weight: 10
+    - name: Tags
+      url: tags/
+      weight: 30
+    - name: Search
+      url: search/
+      weight: 40
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+enableEmoji: true
+enableRobotsTXT: true
