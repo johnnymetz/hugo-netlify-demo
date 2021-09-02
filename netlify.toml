@@ -7,12 +7,12 @@ HUGO_VERSION = "0.87.0"
 HUGO_ENV = "production"
 # HUGO_ENABLEGITINFO = "true"
 
-[context.staging]
-command = "hugo --gc --minify --buildDrafts --buildFuture -b https://staging.johnnymetz.net"
+[context.dev]
+command = "hugo --gc --minify --buildDrafts --buildFuture -b https://dev.johnnymetz.net"
 
-[context.staging.environment]
+[context.dev.environment]
 HUGO_VERSION = "0.87.0"
-HUGO_ENV = "staging"
+# HUGO_ENV = "dev"
 # HUGO_ENABLEGITINFO = "true"
 
 # [context.split1]
